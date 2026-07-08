@@ -1,0 +1,229 @@
+/* ===================================================
+   PRESUTUFT LITE V1
+=================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+
+    background:#f2f2f2;
+    color:#222;
+    padding:18px;
+
+}
+
+.container{
+
+    max-width:700px;
+    margin:auto;
+
+}
+
+header{
+
+    text-align:center;
+    margin-bottom:25px;
+
+}
+
+header h1{
+
+    font-size:32px;
+    color:#009688;
+    margin-bottom:6px;
+
+}
+
+header p{
+
+    color:#666;
+    font-size:15px;
+
+}
+
+.card{
+
+    background:#fff;
+    border-radius:18px;
+    padding:18px;
+    margin-bottom:18px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+}
+
+.card h2{
+
+    margin-bottom:18px;
+    color:#333;
+    font-size:20px;
+
+}
+
+.campo{
+
+    display:flex;
+    flex-direction:column;
+    margin-bottom:15px;
+
+}
+
+.campo label{
+
+    font-weight:bold;
+    margin-bottom:6px;
+    color:#555;
+
+}
+
+.campo input,
+.campo select{
+
+    width:100%;
+    padding:14px;
+    font-size:16px;
+
+    border:1px solid #d0d0d0;
+    border-radius:12px;
+
+    outline:none;
+
+}
+
+.campo input:focus,
+.campo select:focus{
+
+    border-color:#009688;
+
+}
+
+.fila{
+
+    display:flex;
+    gap:12px;
+
+}
+
+.fila .campo{
+
+    flex:1;
+
+}
+
+.resultado{
+
+    text-align:center;
+
+}
+
+.precio{
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+
+}
+
+.precio span{
+
+    font-size:18px;
+    color:#666;
+
+}
+
+#precioFinal{
+
+    font-size:42px;
+    color:#009688;
+    font-weight:bold;
+
+}
+
+.acciones{
+
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+
+}
+
+button{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:16px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+button:active{
+
+    transform:scale(.98);
+
+}
+
+#btnGuardarConfiguracion{
+
+    background:#FF9800;
+    color:#fff;
+    margin-top:5px;
+
+}
+
+#btnCalcular{
+
+    background:#009688;
+    color:#fff;
+
+}
+
+#btnLimpiar{
+
+    background:#607D8B;
+    color:#fff;
+
+}
+
+#btnWhatsapp{
+
+    background:#25D366;
+    color:#fff;
+
+}
+
+@media(max-width:600px){
+
+    .fila{
+
+        flex-direction:column;
+
+    }
+
+    header h1{
+
+        font-size:28px;
+
+    }
+
+    #precioFinal{
+
+        font-size:36px;
+
+    }
+
+}

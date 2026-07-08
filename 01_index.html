@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PresuTuft Lite V1</title>
+
+<link rel="stylesheet" href="02_style.css">
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#009688">
+
+<link rel="apple-touch-icon" href="icono-192.png">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<h1>PresuTuft Lite</h1>
+
+<p>Calculadora de presupuestos</p>
+
+</header>
+
+<section class="card">
+
+<h2>Cliente</h2>
+
+<div class="campo">
+
+<label>Nombre</label>
+
+<input
+type="text"
+id="cliente"
+placeholder="Nombre del cliente">
+
+</div>
+
+</section>
+
+<section class="card">
+
+<h2>Trabajo</h2>
+
+<div class="campo">
+
+<label>Diseño</label>
+
+<input
+type="text"
+id="diseno"
+placeholder="Ej: Goku">
+
+</div>
+
+<div class="fila">
+
+<div class="campo">
+
+<label>Ancho (cm)</label>
+
+<input
+type="number"
+id="ancho"
+min="1">
+
+</div>
+
+<div class="campo">
+
+<label>Alto (cm)</label>
+
+<input
+type="number"
+id="alto"
+min="1">
+
+</div>
+
+</div>
+
+<div class="fila">
+
+<div class="campo">
+
+<label>Cantidad</label>
+
+<input
+type="number"
+id="cantidad"
+value="1"
+min="1">
+
+</div>
+
+<div class="campo">
+
+<label>Complejidad</label>
+
+<select id="complejidad">
+
+<option value="simple">Simple</option>
+
+<option value="media" selected>Media</option>
+
+<option value="compleja">Compleja</option>
+
+</select>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="card">
+
+<h2>Configuración</h2>
+
+<div class="campo">
+
+<label>Lana (100 g)</label>
+
+<input
+type="number"
+id="precioLana"
+value="8000">
+
+</div>
+
+<div class="campo">
+
+<label>Tela primaria (m²)</label>
+
+<input
+type="number"
+id="precioTelaPrimaria"
+value="15000">
+
+</div>
+
+<div class="campo">
+
+<label>Tela secundaria (m²)</label>
+
+<input
+type="number"
+id="precioTelaSecundaria"
+value="15000">
+
+</div>
+
+<div class="campo">
+
+<label>Pegamento (balde de 2 kg)</label>
+
+<input
+type="number"
+id="precioPegamento"
+value="25000">
+
+</div>
+
+<button
+id="btnGuardarConfiguracion"
+type="button">
+
+Guardar configuración
+
+</button>
+
+</section>
+
+<section class="card resultado">
+
+<h2>Resultado</h2>
+
+<div class="precio">
+
+<span>Precio final</span>
+
+<strong id="precioFinal">$0</strong>
+
+</div>
+
+</section>
+
+<section class="acciones">
+
+<button
+id="btnCalcular"
+type="button">
+
+Calcular
+
+</button>
+
+<button
+id="btnLimpiar"
+type="button">
+
+Limpiar
+
+</button>
+
+<button
+id="btnWhatsapp"
+type="button">
+
+Compartir por WhatsApp
+
+</button>
+
+</section>
+
+</div>
+
+<script src="app.js"></script>
+
+<script>
+
+if ("serviceWorker" in navigator) {
+
+    window.addEventListener("load", () => {
+
+        navigator.serviceWorker.register("service-worker.js");
+
+    });
+
+}
+
+</script>
+
+</body>
+
+</html>
